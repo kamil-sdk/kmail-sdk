@@ -1,0 +1,5 @@
+syntax = "proto3";
+
+message IdFilter {
+  int64 Id = 1;
+}

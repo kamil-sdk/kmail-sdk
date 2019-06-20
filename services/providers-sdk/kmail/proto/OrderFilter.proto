@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+import "Guid.proto";
+import "EBetStatus.proto";
+import "DateTime.proto";
+
+message OrderFilter {
+  int64 OrderId = 1;
+  Guid OrderClientId = 2;
+  int64 EventId = 3;
+  int64 LineId = 4;
+  EBetStatus Status = 5;
+  DateTime CreatedAfter = 6;
+  DateTime CreatedBefore = 7;
+  DateTime EventStartTimeAfter = 8;
+  DateTime EventStartTimeBefore = 9;
+}

@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+import "EMarketGroup.proto";
+import "EEventPeriod.proto";
+
+message ApiEventModel {
+  int64 LeagueId = 30;
+  int64 HomeTeamId = 31;
+  int64 AwayTeamId = 32;
+  EMarketGroup MarketGroup = 33;
+  EEventPeriod EventPeriod = 34;
+  bool NeutralGround = 35;
+}

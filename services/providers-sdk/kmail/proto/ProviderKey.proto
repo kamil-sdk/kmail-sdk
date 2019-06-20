@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option java_outer_classname = "ProviderKeyProtos";
+option java_package = "generated";
+
+import "EProviderIdentity.proto";
+
+message ProviderKey {
+  EProviderIdentity Identity = 1;
+  int32 Instance = 2;
+}

@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+import "Guid.proto";
+import "EBookmakerIdentity.proto";
+import "EEntityStatus.proto";
+
+message ApiLinePriceModel {
+  Guid RequestId = 1;
+  int64 Id = 10;
+  int64 LineId = 11;
+  EBookmakerIdentity Bookmaker = 12;
+  EEntityStatus Status = 13;
+  double HomePrice = 14;
+  double AwayPrice = 15;
+  double DrawPrice = 16;
+}

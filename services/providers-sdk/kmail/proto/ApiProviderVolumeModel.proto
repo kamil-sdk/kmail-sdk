@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_outer_classname = "ApiProviderVolumeModelProtos";
+option java_package = "generated";
+
+import "Guid.proto";
+import "EProviderIdentity.proto";
+import "ESideSelection.proto";
+import "ApiVolumeModel.proto";
+
+message ApiProviderVolumeModel {
+  Guid RequestId = 1;
+  EProviderIdentity Provider = 10;
+  int64 LineId = 11;
+  ESideSelection Selection = 12;
+  repeated ApiVolumeModel Limits = 13;
+}

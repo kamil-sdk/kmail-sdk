@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+import "EApiError.proto";
+
+message ApiCommandStatus {
+  EApiError Error = 1;
+  string Message = 2;
+  string SecurityToken = 3;
+}

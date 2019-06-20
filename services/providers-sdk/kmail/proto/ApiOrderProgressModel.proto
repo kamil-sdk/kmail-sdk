@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+import "Guid.proto";
+
+message ApiOrderProgressModel {
+  Guid RequestId = 1;
+  int64 OrderId = 10;
+  Guid OrderClientId = 11;
+  int64 UserId = 12;
+  double TransitStake = 13;
+}

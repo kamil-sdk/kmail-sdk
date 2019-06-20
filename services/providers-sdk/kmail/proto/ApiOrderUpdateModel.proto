@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+import "Guid.proto";
+
+message ApiOrderUpdateModel {
+  Guid RequestId = 1;
+  int64 OrderId = 10;
+  Guid OrderClientId = 11;
+  int64 UserId = 12;
+  double AverageConfirmedPrice = 13;
+  double WaitingStake = 14;
+  double TotalConfirmedStake = 15;
+}

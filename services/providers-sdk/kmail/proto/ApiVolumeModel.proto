@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+message ApiVolumeModel {
+  double Price = 1;
+  double MinAmount = 2;
+  double MaxAmount = 3;
+}

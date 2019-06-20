@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+enum EBetResult {
+  EBetResultRunning = 0;
+  EBetResultWon = 1;
+  EBetResultLost = 2;
+  EBetResultRefunded = 3;
+  EBetResultRejected = 4;
+}

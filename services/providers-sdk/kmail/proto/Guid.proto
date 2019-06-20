@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+message Guid {
+  fixed64 lo = 1;
+  fixed64 hi = 2;
+}

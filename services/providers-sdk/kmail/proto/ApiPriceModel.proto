@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option java_outer_classname = "ApiPriceModelProtos";
+option java_package = "generated";
+
+import "Guid.proto";
+import "EProviderIdentity.proto";
+import "EEntityStatus.proto";
+
+message ApiPriceModel {
+  Guid RequestId = 1;
+  string dep1 = 10;
+  int64 LineId = 11;
+  int64 MarketId = 12;
+  int64 EventId = 13;
+  EProviderIdentity Provider = 14;
+  EEntityStatus Status = 15;
+  string dep2 = 17;
+  double HomePrice = 20;
+  double AwayPrice = 21;
+  double DrawPrice = 22;
+  bool IsValidForParlay = 23;
+  int64 SequenceNumber = 24;
+}

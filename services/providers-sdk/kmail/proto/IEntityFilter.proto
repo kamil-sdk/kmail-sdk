@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+import "IdFilter.proto";
+import "SportFilter.proto";
+import "RegionFilter.proto";
+import "LeagueFilter.proto";
+import "EventFilter.proto";
+import "LineFilter.proto";
+import "LinePriceFilter.proto";
+import "OrderFilter.proto";
+import "OrderLineFilter.proto";
+
+message IEntityFilter {
+  // The following represents sub-types; at most 1 should have a value.
+  IdFilter IdFilter = 1;
+  SportFilter SportFilter = 2;
+  RegionFilter RegionFilter = 3;
+  LeagueFilter LeagueFilter = 4;
+  EventFilter EventFilter = 5;
+  LineFilter LineFilter = 6;
+  LinePriceFilter LinePriceFilter = 7;
+  OrderFilter OrderFilter = 8;
+  OrderLineFilter OrderLineFilter = 9;
+}

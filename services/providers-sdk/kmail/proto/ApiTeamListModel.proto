@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option java_outer_classname = "ApiTeamListModelProtos";
+option java_package = "generated";
+
+import "Guid.proto";
+import "ApiTeamModel.proto";
+
+message ApiTeamListModel {
+  Guid RequestId = 1;
+  repeated ApiTeamModel Teams = 10;
+}

@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+enum EApiError {
+  EApiErrorNone = 0;
+  EApiErrorInvalidLicense = 1;
+  EApiErrorInvalidCredentials = 2;
+  EApiErrorInvalidSecurityToken = 3;
+  EApiErrorNotAuthorized = 4;
+  EApiErrorInvalidTopic = 5;
+  EApiErrorClientServerVersionMismatch = 6;
+  EApiErrorSlowSubscriber = 7;
+  EApiErrorMessageLoss = 8;
+  EApiErrorConnectionLost = 9;
+  EApiErrorTimeoutWaitingForResponse = 10;
+  EApiErrorNoResponse = 11;
+  EApiErrorServerFault = 12;
+  EApiErrorUnknownCommand = 13;
+}

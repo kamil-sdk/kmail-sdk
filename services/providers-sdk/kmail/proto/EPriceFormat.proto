@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option java_outer_classname = "EPriceFormatProtos";
+option java_package = "generated";
+
+enum EPriceFormat {
+  EPriceFormatEuro = 0;
+  EPriceFormatHongKong = 1;
+  EPriceFormatMalay = 2;
+  EPriceFormatIndo = 3;
+  EPriceFormatUS = 4;
+}

@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+option java_outer_classname = "ApiSymmetricKeyProtos";
+option java_package = "generated";
+
+message ApiSymmetricKey {
+  bytes Key = 1;
+  bytes IV = 2;
+}

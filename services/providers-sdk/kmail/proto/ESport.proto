@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+enum ESport {
+  ESportUnknown = 0;
+  ESportSoccer = 1;
+  ESportAmericanFootball = 2;
+  ESportBaseball = 3;
+  ESportBasketball = 4;
+  ESportTennis = 5;
+  ESportIceHockey = 6;
+}

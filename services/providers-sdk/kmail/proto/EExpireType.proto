@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+enum EExpireType {
+  EExpireTypeNone = 0;
+  EExpireTypeKickOff = 1;
+  EExpireTypeHalfTime = 2;
+  EExpireTypeFullTime = 3;
+  EExpireTypeTime = 4;
+}

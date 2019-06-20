@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+import "Guid.proto";
+
+message ApiCancelOrderCommand {
+  Guid RequestId = 1;
+  string SecurityToken = 2;
+  int64 EventId = 10;
+  int64 OrderId = 11;
+  Guid ClientOrderId = 12;
+}

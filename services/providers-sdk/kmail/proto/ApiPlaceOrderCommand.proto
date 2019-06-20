@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+import "Guid.proto";
+import "ESideSelection.proto";
+import "EExpireType.proto";
+import "ApiBookmakerVolumeModel.proto";
+
+message ApiPlaceOrderCommand {
+  Guid RequestId = 1;
+  string SecurityToken = 2;
+  Guid OrderId = 10;
+  int64 LineId = 11;
+  ESideSelection SideSelection = 12;
+  double StakeAmount = 13;
+  double MinimumPrice = 14;
+  int32 HomeScore = 15;
+  int32 AwayScore = 16;
+  EExpireType ExpireType = 17;
+  int32 ExpirySeconds = 18;
+  repeated ApiBookmakerVolumeModel BookmakerVolumeModel = 19;
+  bool AllowVolumeFetching = 20;
+}

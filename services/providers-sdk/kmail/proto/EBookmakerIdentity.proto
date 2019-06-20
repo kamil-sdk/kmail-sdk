@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+enum EBookmakerIdentity {
+  EBookmakerIdentityNone = 0;
+  EBookmakerIdentitySboBet = 1;
+  EBookmakerIdentityPinnacle = 2;
+  EBookmakerIdentityBetIsn = 3;
+  EBookmakerIdentityMaxBet = 4;
+}

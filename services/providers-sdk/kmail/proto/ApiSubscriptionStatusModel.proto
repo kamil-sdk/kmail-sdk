@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option java_outer_classname = "ApiSubscriptionStatusModelProtos";
+option java_package = "generated";
+
+import "EProviderIdentity.proto";
+import "ESport.proto";
+
+message ApiSubscriptionStatusModel {
+  repeated EProviderIdentity EnabledProviders = 1;
+  bool HasSubscription = 2;
+  repeated ESport Sports = 3;
+  repeated int64 Regions = 4;
+  repeated int64 Leagues = 5;
+}

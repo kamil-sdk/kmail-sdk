@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+import "Guid.proto";
+import "DateTime.proto";
+import "EMessageFlags.proto";
+import "ERequestStatus.proto";
+
+message MessageEnvelope {
+  Guid MessageId = 1;
+  string Origin = 2;
+  DateTime Timestamp = 3;
+  int32 PayloadType = 4;
+  EMessageFlags Flags = 5;
+  string Recipient = 6;
+  ERequestStatus Status = 7;
+  int64 SequenceNumber = 8;
+}

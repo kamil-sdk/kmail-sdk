@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option java_outer_classname = "ApiParlayOrderModelProtos";
+option java_package = "generated";
+
+import "Guid.proto";
+import "ApiParlaySelection.proto";
+import "DateTime.proto";
+import "EBetStatus.proto";
+import "EBetResult.proto";
+import "EBetRejectReason.proto";
+
+message ApiParlayOrderModel {
+  Guid RequestId = 1;
+  int64 Id = 10;
+  Guid ClientId = 11;
+  int64 UserId = 12;
+  repeated ApiParlaySelection Selections = 20;
+  DateTime Created = 21;
+  double Price = 22;
+  double StakeAmount = 23;
+  double ProfitLossAmount = 24;
+  EBetStatus Status = 25;
+  EBetResult Result = 26;
+  EBetRejectReason RejectReason = 27;
+}

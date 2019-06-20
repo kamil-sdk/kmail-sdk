@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+import "Guid.proto";
+import "EBookmakerIdentity.proto";
+import "DateTime.proto";
+import "EBetStatus.proto";
+import "EBetResult.proto";
+import "EBetRejectReason.proto";
+
+message ApiOrderLineModel {
+  Guid RequestId = 1;
+  int64 Id = 10;
+  int64 OrderId = 11;
+  Guid OrderClientId = 12;
+  EBookmakerIdentity Bookmaker = 13;
+  DateTime Created = 20;
+  DateTime Placed = 21;
+  DateTime Confirmed = 22;
+  DateTime EventStartTime = 23;
+  double StakeAmount = 30;
+  double ProfitLoss = 31;
+  double RequestedPrice = 32;
+  double ConfirmedPrice = 33;
+  EBetStatus Status = 40;
+  EBetResult Result = 41;
+  EBetRejectReason RejectReason = 42;
+}

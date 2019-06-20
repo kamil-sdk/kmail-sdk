@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option java_outer_classname = "ApiSecureConnectCommandProtos";
+option java_package = "generated";
+
+import "Guid.proto";
+
+message ApiSecureConnectCommand {
+  Guid RequestId = 1;
+  string SecurityToken = 2;
+  bytes EncryptedConnectCommand = 10;
+}

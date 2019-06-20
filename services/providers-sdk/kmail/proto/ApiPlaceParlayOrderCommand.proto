@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option java_outer_classname = "ApiPlaceParlayOrderCommandProtos";
+option java_package = "generated";
+
+import "Guid.proto";
+import "ApiOrderSelection.proto";
+import "ApiProviderSelection.proto";
+
+message ApiPlaceParlayOrderCommand {
+  Guid RequestId = 1;
+  string SecurityToken = 2;
+  Guid OrderId = 10;
+  repeated ApiOrderSelection Selections = 11;
+  double StakeAmount = 12;
+  double MinimumPrice = 13;
+  repeated ApiProviderSelection Providers = 20;
+}

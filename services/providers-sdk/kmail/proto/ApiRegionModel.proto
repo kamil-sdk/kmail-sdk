@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+import "Guid.proto";
+
+message ApiRegionModel {
+  Guid RequestId = 1;
+  int64 Id = 10;
+  string Name = 11;
+  string CountryCode = 12;
+}

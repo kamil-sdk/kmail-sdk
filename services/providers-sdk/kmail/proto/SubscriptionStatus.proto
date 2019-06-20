@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+message SubscriptionStatus {
+  string Topic = 1;
+  bool Accepted = 2;
+}

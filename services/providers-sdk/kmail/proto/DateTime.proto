@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+message DateTime {
+  sint64 value = 1;
+  TimeSpanScale scale = 2;
+  enum TimeSpanScale {
+    Days = 0;
+    Hours = 1;
+    Minutes = 2;
+    Seconds = 3;
+    Milliseconds = 4;
+    Ticks = 5;
+    MinMax = 15;
+  }
+}

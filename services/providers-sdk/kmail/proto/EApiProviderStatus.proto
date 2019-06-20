@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option java_outer_classname = "EApiProviderStatusProtos";
+option java_package = "generated";
+
+enum EApiProviderStatus {
+  EApiProviderStatusOffline = 0;
+  EApiProviderStatusOnline = 1;
+  EApiProviderStatusDisabled = -1;
+}

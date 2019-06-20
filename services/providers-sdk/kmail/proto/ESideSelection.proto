@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+enum ESideSelection {
+  ESideSelectionHome = 0;
+  ESideSelectionAway = 1;
+  ESideSelectionOver = 2;
+  ESideSelectionUnder = 3;
+  ESideSelectionDraw = 4;
+  ESideSelectionOdd = 5;
+  ESideSelectionEven = 6;
+}

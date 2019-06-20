@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+enum EClockPeriod {
+  EClockPeriodNone = 0;
+  EClockPeriodFirstHalf = 1;
+  EClockPeriodFirstInning = 2;
+  EClockPeriodEndFirstInning = 3;
+  EClockPeriodSecondInning = 4;
+  EClockPeriodEndSecondInning = 5;
+  EClockPeriodThirdInning = 6;
+  EClockPeriodEndThirdInning = 7;
+  EClockPeriodFourthInning = 8;
+  EClockPeriodEndFourthInning = 9;
+  EClockPeriodFifthInning = 10;
+  EClockPeriodEndFifthInning = 11;
+  EClockPeriodFirstQuarter = 12;
+  EClockPeriodEndFirstQuarter = 13;
+  EClockPeriodSecondQuarter = 14;
+  EClockPeriodHalfTime = 15;
+  EClockPeriodSecondHalf = 16;
+  EClockPeriodSixthInning = 17;
+  EClockPeriodEndSixthInning = 18;
+  EClockPeriodSeventhInning = 19;
+  EClockPeriodEndSeventhInning = 20;
+  EClockPeriodEighthInning = 21;
+  EClockPeriodEndEighthInning = 22;
+  EClockPeriodNinthInning = 23;
+  EClockPeriodEndRegularTime = 24;
+  EClockPeriodExtraInning = 25;
+  EClockPeriodThirdQuarter = 26;
+  EClockPeriodEndThirdQuarter = 27;
+  EClockPeriodFourthQuarter = 28;
+  EClockPeriodOverTime = 29;
+}

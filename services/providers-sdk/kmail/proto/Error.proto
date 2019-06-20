@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+message Error {
+  string Message = 1;
+  string Details = 2;
+}

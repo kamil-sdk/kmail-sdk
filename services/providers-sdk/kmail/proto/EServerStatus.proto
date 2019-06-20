@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option java_outer_classname = "EServerStatusProtos";
+option java_package = "generated";
+
+enum EServerStatus {
+  EServerStatusUnspecified = 0;
+  EServerStatusOnline = 1;
+  EServerStatusOffline = -1;
+}

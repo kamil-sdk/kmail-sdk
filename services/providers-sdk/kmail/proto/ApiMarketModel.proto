@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option java_outer_classname = "ApiMarketModelProtos";
+option java_package = "generated";
+
+import "Guid.proto";
+import "EMarketGroup.proto";
+import "EEventPeriod.proto";
+import "ApiLineModel.proto";
+
+message ApiMarketModel {
+  Guid RequestId = 1;
+  int64 Id = 10;
+  string EventId = 11;
+  EMarketGroup MarketGroup = 12;
+  EEventPeriod EventPeriod = 13;
+  bool IsActive = 14;
+  int32 HomeScore = 15;
+  int32 AwayScore = 16;
+  int32 HomeScoreFirstHalf = 17;
+  int32 AwayScoreFirstHalf = 18;
+  repeated ApiLineModel Lines = 19;
+  int64 SequenceNumber = 20;
+  string dep1 = 25;
+}

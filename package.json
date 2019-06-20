@@ -1,0 +1,40 @@
+{
+  "name": "kmail-sdk",
+  "version": "1.2.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/core": "^7.2.15",
+    "@types/jest": "^24.0.13",
+    "body-parser": "^1.19.0",
+    "chalk": "latest",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "date-time": "^3.1.0",
+    "express": "latest",
+    "express-session": "^1.16.1",
+    "glob": "^7.1.4",
+    "lodash": "^4.17.11",
+    "long": "^4.0.0",
+    "moment": "^2.24.0",
+    "nodemailer": "^5.1.1",
+    "protobufjs": "^6.8.8",
+    "uuid": "^3.3.2",
+    "zeromq": "^5.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.2"
+  }
+}

@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+import "Guid.proto";
+import "EBookmakerIdentity.proto";
+import "ESideSelection.proto";
+import "ApiVolumeModel.proto";
+
+message ApiBookmakerVolumeModel {
+  Guid RequestId = 1;
+  EBookmakerIdentity Bookmaker = 10;
+  int64 LineId = 11;
+  ESideSelection Selection = 12;
+  repeated ApiVolumeModel Limits = 13;
+}

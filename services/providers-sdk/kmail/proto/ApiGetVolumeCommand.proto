@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option java_outer_classname = "ApiGetVolumeCommandProtos";
+option java_package = "generated";
+
+import "Guid.proto";
+import "ESideSelection.proto";
+import "EProviderIdentity.proto";
+
+message ApiGetVolumeCommand {
+  Guid RequestId = 1;
+  string SecurityToken = 2;
+  int64 LineId = 10;
+  ESideSelection SideSelection = 11;
+  repeated EProviderIdentity EnabledProviders = 12;
+}

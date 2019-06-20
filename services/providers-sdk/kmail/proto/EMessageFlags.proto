@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+enum EMessageFlags {
+  EMessageFlagsNone = 0;
+  EMessageFlagsResponseExpected = 1;
+  EMessageFlagsIsResponse = 2;
+  EMessageFlagsHighFrequency = 4;
+  EMessageFlagsEncryptedPayload = 8;
+}

@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+enum EBetType {
+  EBetTypeUnknown = 0;
+  EBetTypeAsianHandicap = 1;
+  EBetTypeOverUnder = 2;
+  EBetTypeMoneyLine = 3;
+}

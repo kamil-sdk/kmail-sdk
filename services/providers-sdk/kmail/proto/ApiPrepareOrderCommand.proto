@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+import "Guid.proto";
+import "ESideSelection.proto";
+import "EBookmakerIdentity.proto";
+
+message ApiPrepareOrderCommand {
+  Guid RequestId = 1;
+  string SecurityToken = 2;
+  int64 LineId = 10;
+  ESideSelection SideSelection = 11;
+  repeated EBookmakerIdentity EnabledBookmakers = 12;
+}

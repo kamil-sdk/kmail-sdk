@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+import "Guid.proto";
+import "EEntityTypes.proto";
+import "IEntityFilter.proto";
+
+message ApiSubscribeCommand {
+  Guid RequestId = 1;
+  string SecurityToken = 2;
+  EEntityTypes EntityTypes = 10;
+  repeated IEntityFilter Filters = 11;
+}

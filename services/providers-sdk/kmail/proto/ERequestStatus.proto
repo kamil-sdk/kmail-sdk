@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+enum ERequestStatus {
+  ERequestStatusUnspecified = 0;
+  ERequestStatusSuccess = 1;
+  ERequestStatusServerRequest = 2;
+  ERequestStatusError = -1;
+}

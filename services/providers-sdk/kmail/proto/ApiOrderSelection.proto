@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option java_outer_classname = "ApiOrderSelectionProtos";
+option java_package = "generated";
+
+import "ESideSelection.proto";
+
+message ApiOrderSelection {
+  int64 LineId = 1;
+  ESideSelection Side = 2;
+  double MinimumPrice = 3;
+  int32 HomeScore = 4;
+  int32 AwayScore = 5;
+}

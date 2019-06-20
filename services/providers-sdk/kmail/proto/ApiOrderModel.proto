@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+import "Guid.proto";
+import "EExpireType.proto";
+import "DateTime.proto";
+import "ESideSelection.proto";
+import "EBetStatus.proto";
+
+message ApiOrderModel {
+  Guid RequestId = 1;
+  int64 Id = 10;
+  Guid ClientId = 11;
+  int64 UserId = 12;
+  int64 EventId = 13;
+  int64 LineId = 14;
+  EExpireType ExpireType = 15;
+  DateTime Expiry = 16;
+  DateTime Created = 17;
+  DateTime EventStartTime = 18;
+  ESideSelection SideSelection = 19;
+  double Points = 20;
+  int32 HomeTeamBetScore = 21;
+  int32 AwayTeamBetScore = 22;
+  int32 EventRunningTime = 23;
+  double RequestedPrice = 30;
+  double RequestedStake = 31;
+  int32 HomeTeamFinalScore = 40;
+  int32 AwayTeamFinalScore = 41;
+  EBetStatus Status = 42;
+}

@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+import "Guid.proto";
+import "ELinePeriod.proto";
+import "EBetType.proto";
+import "EEntityStatus.proto";
+
+message ApiLineModel {
+  Guid RequestId = 1;
+  int64 Id = 10;
+  int64 EventId = 11;
+  ELinePeriod LinePeriod = 12;
+  EBetType BetType = 13;
+  double Points = 14;
+  EEntityStatus Status = 15;
+}

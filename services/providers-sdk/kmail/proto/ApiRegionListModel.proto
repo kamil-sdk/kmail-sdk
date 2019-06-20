@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option java_outer_classname = "ApiRegionListModelProtos";
+option java_package = "generated";
+
+import "Guid.proto";
+import "ApiRegionModel.proto";
+
+message ApiRegionListModel {
+  Guid RequestId = 1;
+  repeated ApiRegionModel Regions = 10;
+}

@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option java_outer_classname = "EProviderIdentityProtos";
+option java_package = "generated";
+
+enum EProviderIdentity {
+  EProviderIdentityNone = 0;
+  EProviderIdentitySboBet = 1;
+  EProviderIdentityPinnacle = 2;
+  EProviderIdentityBetIsn = 3;
+  EProviderIdentityMaxBet = 4;
+  EProviderIdentityRunningBall = 5;
+}

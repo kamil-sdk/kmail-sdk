@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+enum EBetStatus {
+  EBetStatusOpen = 0;
+  EBetStatusConfirmed = 1;
+  EBetStatusCancelled = 2;
+  EBetStatusFailed = 3;
+  EBetStatusWaiting = 4;
+  EBetStatusResolved = 5;
+}

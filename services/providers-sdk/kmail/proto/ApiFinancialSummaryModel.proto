@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+import "Guid.proto";
+
+message ApiFinancialSummaryModel {
+  Guid RequestId = 1;
+  int64 UserId = 10;
+  int64 DayId = 11;
+  double CashBalance = 12;
+  double Credit = 13;
+  double Outstanding = 14;
+  double ProfitLoss = 15;
+  double Turnover = 16;
+}

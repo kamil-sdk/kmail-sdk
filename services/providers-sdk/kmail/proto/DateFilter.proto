@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+import "DateTime.proto";
+
+message DateFilter {
+  DateTime After = 1;
+  DateTime Before = 2;
+}

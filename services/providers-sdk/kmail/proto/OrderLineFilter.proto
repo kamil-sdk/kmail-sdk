@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+import "DateTime.proto";
+import "EBetStatus.proto";
+import "EBetResult.proto";
+
+message OrderLineFilter {
+  int64 OrderId = 1;
+  int64 OrderLineId = 2;
+  DateTime PlacedAfter = 3;
+  DateTime PlacedBefore = 4;
+  DateTime ResolvedAfter = 5;
+  DateTime ResolvedBefore = 6;
+  EBetStatus Status = 7;
+  EBetResult Result = 8;
+  DateTime EventStartTimeAfter = 9;
+  DateTime EventStartTimeBefore = 10;
+}

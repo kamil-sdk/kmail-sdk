@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+import "Guid.proto";
+import "EApiBookmakerStatus.proto";
+
+message ApiBookmakerStatusModel {
+  Guid RequestId = 1;
+  int64 BookmakerId = 10;
+  EApiBookmakerStatus Status = 11;
+  string Reason = 12;
+}

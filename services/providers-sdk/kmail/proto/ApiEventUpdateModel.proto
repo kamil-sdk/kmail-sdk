@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+import "Guid.proto";
+import "DateTime.proto";
+import "EClockPeriod.proto";
+import "EEntityStatus.proto";
+import "EBookmakerIdentity.proto";
+import "ApiEventModel.proto";
+
+message ApiEventUpdateModel {
+  Guid RequestId = 1;
+  int64 Id = 10;
+  DateTime StartTime = 11;
+  int32 RunningTime = 12;
+  EClockPeriod ClockPeriod = 13;
+  EEntityStatus Status = 14;
+  bool IsLive = 15;
+  int32 HomeScore = 16;
+  int32 AwayScore = 17;
+  int32 HomeRedCards = 18;
+  int32 AwayRedCards = 19;
+  repeated EBookmakerIdentity DataProviders = 20;
+  // The following represents sub-types; at most 1 should have a value.
+  ApiEventModel ApiEventModel = 104;
+}

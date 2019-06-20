@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+import "ELinePeriod.proto";
+import "EBetType.proto";
+
+message LineFilter {
+  int64 EventId = 1;
+  ELinePeriod LinePeriod = 2;
+  EBetType BetType = 3;
+}

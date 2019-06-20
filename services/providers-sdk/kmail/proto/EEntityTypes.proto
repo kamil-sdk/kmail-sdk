@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+enum EEntityTypes {
+  EEntityTypesNone = 0;
+  EEntityTypesRegion = 2;
+  EEntityTypesLeague = 4;
+  EEntityTypesTeam = 8;
+  EEntityTypesEvent = 16;
+  EEntityTypesLine = 32;
+  EEntityTypesLinePrice = 64;
+  EEntityTypesDomainData = 126;
+  EEntityTypesOrder = 1024;
+  EEntityTypesOrderLine = 2048;
+  EEntityTypesOrderData = 3072;
+  EEntityTypesAll = 3198;
+  EEntityTypesUser = 32768;
+  EEntityTypesAccount = 65536;
+  EEntityTypesFinancialSummary = 131072;
+  EEntityTypesMaintenance = 1048576;
+}

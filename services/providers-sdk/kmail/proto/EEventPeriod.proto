@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+enum EEventPeriod {
+  EEventPeriodUnknown = 0;
+  EEventPeriodOrdinaryTime = 1;
+  EEventPeriodExtraTime = 2;
+  EEventPeriodPenalties = 3;
+}

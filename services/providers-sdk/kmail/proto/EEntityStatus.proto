@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+enum EEntityStatus {
+  EEntityStatusUnspecified = 0;
+  EEntityStatusActive = 1;
+  EEntityStatusInactive = -1;
+}

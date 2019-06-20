@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+enum EBetRejectReason {
+  EBetRejectReasonNone = 0;
+  EBetRejectReasonUnknown = 1;
+  EBetRejectReasonInvalidStake = 2;
+  EBetRejectReasonPriceChanged = 3;
+  EBetRejectReasonMarketUpdating = 4;
+  EBetRejectReasonInsufficientFunds = 5;
+  EBetRejectReasonVoided = 6;
+  EBetRejectReasonNoEvent = 7;
+  EBetRejectReasonAccountProblems = 8;
+  EBetRejectReasonAccountOrMatchLimitExceeded = 9;
+  EBetRejectReasonBookmakerOffline = 10;
+}

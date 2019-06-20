@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+import "EMarketGroup.proto";
+import "EEventPeriod.proto";
+import "DateTime.proto";
+import "EEventStatus.proto";
+
+message EventFilter {
+  int64 TeamId = 1;
+  EMarketGroup MarketGroup = 2;
+  EEventPeriod EventPeriod = 3;
+  DateTime EventStartTimeAfter = 4;
+  DateTime EventStartTimeBefore = 5;
+  EEventStatus Status = 6;
+}

@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+import "Guid.proto";
+import "ESport.proto";
+
+message ApiLeagueModel {
+  Guid RequestId = 1;
+  int64 Id = 10;
+  ESport Sport = 11;
+  int64 RegionId = 12;
+  string Name = 13;
+}

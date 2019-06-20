@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+import "Guid.proto";
+import "EBetStatus.proto";
+
+message ApiOrderStatusUpdateModel {
+  Guid RequestId = 1;
+  int64 OrderId = 10;
+  Guid OrderClientId = 11;
+  int64 UserId = 12;
+  EBetStatus Status = 13;
+  bool HasOrderLinesInTransit = 14;
+}

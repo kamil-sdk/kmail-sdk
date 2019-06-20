@@ -1,0 +1,5 @@
+syntax = "proto3";
+
+message LeagueFilter {
+  repeated int64 LeagueIds = 1;
+}

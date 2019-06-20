@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+enum EEventStatus {
+  EEventStatusUnspecified = 0;
+  EEventStatusActive = 1;
+  EEventStatusIsLive = 2;
+  EEventStatusClosed = 3;
+}

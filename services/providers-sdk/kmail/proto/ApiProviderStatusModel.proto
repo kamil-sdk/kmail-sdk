@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option java_outer_classname = "ApiProviderStatusModelProtos";
+option java_package = "generated";
+
+import "Guid.proto";
+import "EProviderIdentity.proto";
+import "EApiProviderStatus.proto";
+
+message ApiProviderStatusModel {
+  Guid RequestId = 1;
+  EProviderIdentity ProviderIdentity = 10;
+  EApiProviderStatus Status = 11;
+  string Reason = 12;
+}

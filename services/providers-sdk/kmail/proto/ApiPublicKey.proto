@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+option java_outer_classname = "ApiPublicKeyProtos";
+option java_package = "generated";
+
+message ApiPublicKey {
+  bytes Modulus = 1;
+  bytes Exponent = 2;
+}

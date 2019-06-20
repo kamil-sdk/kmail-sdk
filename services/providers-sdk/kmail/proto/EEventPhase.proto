@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option java_outer_classname = "EEventPhaseProtos";
+option java_package = "generated";
+
+enum EEventPhase {
+  EEventPhaseNone = 0;
+  EEventPhasePreGame = 1;
+  EEventPhaseOrdinaryTime = 2;
+  EEventPhaseExtraTime = 3;
+  EEventPhasePenalty = 4;
+  EEventPhasePostGame = 5;
+}

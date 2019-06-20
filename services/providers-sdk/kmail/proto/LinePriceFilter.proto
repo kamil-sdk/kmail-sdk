@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+import "EBookmakerIdentity.proto";
+
+message LinePriceFilter {
+  int64 LineId = 1;
+  int64 EventId = 2;
+  EBookmakerIdentity Bookmaker = 3;
+}

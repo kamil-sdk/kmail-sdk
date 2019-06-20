@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option java_outer_classname = "ApiProviderSelectionProtos";
+option java_package = "generated";
+
+import "EProviderIdentity.proto";
+import "ApiVolumeModel.proto";
+
+message ApiProviderSelection {
+  EProviderIdentity Provider = 1;
+  ApiVolumeModel Volume = 2;
+}

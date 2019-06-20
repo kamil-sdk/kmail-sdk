@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option java_outer_classname = "ApiParlaySelectionProtos";
+option java_package = "generated";
+
+import "Guid.proto";
+import "ESideSelection.proto";
+import "DateTime.proto";
+
+message ApiParlaySelection {
+  Guid RequestId = 1;
+  int64 Id = 10;
+  int64 OrderId = 11;
+  int64 LineId = 12;
+  ESideSelection Side = 13;
+  double Price = 14;
+  int32 HomeBetScore = 20;
+  int32 AwayBetScore = 21;
+  DateTime EventStartTime = 22;
+  int32 EventRunningTime = 23;
+}

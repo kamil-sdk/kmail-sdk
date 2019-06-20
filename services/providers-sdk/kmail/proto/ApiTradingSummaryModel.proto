@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_outer_classname = "ApiTradingSummaryModelProtos";
+option java_package = "generated";
+
+import "Guid.proto";
+
+message ApiTradingSummaryModel {
+  Guid RequestId = 1;
+  int64 UserId = 10;
+  double CashBalance = 11;
+  double GivenCredit = 12;
+  double Credit = 13;
+  double Outstanding = 14;
+  double TodayTurnover = 15;
+  double TodayProfitLoss = 16;
+  double YesterdayTurnover = 17;
+  double YesterdayProfitLoss = 18;
+}

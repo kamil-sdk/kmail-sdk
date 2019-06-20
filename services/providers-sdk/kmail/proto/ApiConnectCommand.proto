@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+import "Guid.proto";
+
+message ApiConnectCommand {
+  Guid RequestId = 1;
+  string SecurityToken = 2;
+  string LicenseKey = 10;
+  string Identity = 11;
+  string Password = 12;
+  int32 ApiMajorVersion = 13;
+  int32 ApiMinorVersion = 14;
+}

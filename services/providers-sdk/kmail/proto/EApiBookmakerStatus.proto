@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+enum EApiBookmakerStatus {
+  EApiBookmakerStatusOffline = 0;
+  EApiBookmakerStatusOnline = 1;
+  EApiBookmakerStatusDisabled = -1;
+}

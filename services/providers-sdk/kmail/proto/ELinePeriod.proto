@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+enum ELinePeriod {
+  ELinePeriodUnknown = 0;
+  ELinePeriodFullTime = 1;
+  ELinePeriodHalfTime = 2;
+}
