@@ -46,3 +46,4 @@ server/controllers/initMemory.js
 server/utils/temp.js
 server/utils/temp.js
 server/scripts/test-game-crawler.js
+app.js
