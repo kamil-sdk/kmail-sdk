@@ -19,9 +19,9 @@ exports.regionModel = 'ApiRegionModel';
 exports.leagueModel = 'ApiLeagueModel';
 exports.teamModel = 'ApiTeamModel';
 exports.eventModel = 'ApiEventModel';
-exports.marketModel = 'ApiMarketModel';
+exports.eventUpdateModel = 'ApiEventUpdateModel';
 exports.lineModel = 'ApiLineModel';
-exports.priceModel = 'ApiPriceModel';
+exports.priceModel = 'ApiLinePriceModel';
 
 // Commands convert table
 const commandsConvertTable = {};
@@ -51,31 +51,31 @@ commandsConvertTable[exports.subscriptionStatus] = {
 commandsConvertTable[exports.regionModel] = {
   id: 4110,
   emittedName: 'region'
-}
+};
 commandsConvertTable[exports.leagueModel] = {
 	id: 4111,
   emittedName: 'league'
-}
+};
 commandsConvertTable[exports.teamModel] = {
 	id: 4112,
   emittedName: 'team'
-}
+};
 commandsConvertTable[exports.eventModel] = {
 	id: 4113,
   emittedName: 'event'
-}
-commandsConvertTable[exports.marketModel] = {
+};
+commandsConvertTable[exports.eventUpdateModel] = {
 	id: 4114,
-  emittedName: 'bookie'
-}
+  emittedName: 'eventUpdate'
+};
 commandsConvertTable[exports.lineModel] = {
 	id: 4115,
   emittedName: 'line'
-}
+};
 commandsConvertTable[exports.priceModel] = {
 	id: 4116,
   emittedName: 'betOffer'
-}
+};
 
 exports.commandsConvertTable = commandsConvertTable;
 

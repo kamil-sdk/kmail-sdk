@@ -54,11 +54,23 @@ KmailProtoLoader.init().then(() => {
 
   kmail.emitter.on('statusUpdate', (newStatus) => {
     //kmail.subscribeToAll();
-    kmail.subscribeToAll();
+    kmail.runQuery();
   });
 
   kmail.emitter.on('event', (event) => {
     console.log(`received an event object - "${event}"`);
+  });
+
+  kmail.emitter.on('eventUpdate', (eventUpdate) => {
+    console.log(`received an eventUpdate object - "${eventUpdate}"`);
+  });
+
+  kmail.emitter.on('line', (line) => {
+    console.log(`received an line object - "${line}"`);
+  });
+
+  kmail.emitter.on('betOffer', (betOffer) => {
+    console.log(`received an betOffer object - "${betOffer}"`);
   });
 
   const promise = kmail.connect(); 

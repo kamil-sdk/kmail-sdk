@@ -80,7 +80,7 @@ class KmailSDK {
 
   async runQuery(entityTypeInteger, sports) {
     if (!entityTypeInteger) {
-      entityTypeInteger = 7343134; // all types
+      entityTypeInteger = 3198; // all types
     }
 
     if (!sports) {

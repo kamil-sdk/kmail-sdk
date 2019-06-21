@@ -1,6 +1,6 @@
 {
-  "name": "kmailapi-sdk",
-  "version": "1.2.1",
+  "name": "kmail-sdk",
+  "version": "1.2.2",
   "description": "",
   "main": "index.js",
   "scripts": {
