@@ -33,9 +33,8 @@ class KmailSDK {
   async connectXSub() {
     await this.dataSocket.connect(`${this.ipAddress}:${this.dataPort}`);
   
-    const dis = this;
-    this.dataSocket.on('message', function(frame1, frame2, frame3, frame4) {
-      ResponseHandler.routeResponse(frame2, frame3, frame4, dis, true);
+    this.dataSocket.on('message', (frame1, frame2, frame3, frame4) => {
+      ResponseHandler.routeResponse(frame2, frame3, frame4, this, true);
     });
 
     await this.dataSocket.send(PackageTransformer.prepareXSubConnectBuffer(this.securityToken));
@@ -53,16 +52,15 @@ class KmailSDK {
     const buffer = await PackageTransformer.prepare(connectCommand.className, connectCommand.data);
     this.commandSocket.connect(`${this.ipAddress}:${this.commandPort}`);
     
-    const dis = this;
-    this.commandSocket.on('message', function(frame1, frame2, frame3, frame4) {
-      ResponseHandler.routeResponse(frame2, frame3, frame4, dis, false);
+    this.commandSocket.on('message', (frame1, frame2, frame3, frame4) => {
+      ResponseHandler.routeResponse(frame2, frame3, frame4, this, false);
     });
 
     this.commandSocket.send(buffer);
 
     setTimeout(() => {
-      if (!dis.isActive) {
-        dis.promiseDeferred.reject('Timed out');
+      if (!this.isActive) {
+        this.promiseDeferred.reject('Timed out');
       }
     }, 3 * 1000);
 
@@ -70,11 +68,10 @@ class KmailSDK {
   }
 
   activate() {
-    const dis = this;
     this.promiseDeferred.resolve(this.emitter);
     setTimeout(() => {
-      dis.isActive = true;
-      dis.emitter.emit('statusUpdate', {status: 'active'});
+      this.isActive = true;
+      this.emitter.emit('statusUpdate', {status: 'active'});
     }, 200);
   }
 
@@ -101,15 +98,14 @@ class KmailSDK {
   async startKeepAliveProcess() {
     const keepAlive = CommandCreator.createKeepAliveCommand();
     const buffer = await PackageTransformer.prepare(keepAlive.className, keepAlive.data);
-    const dis = this;
 
     const interval = setInterval(() => {
-      if (!dis.isActive || !dis.healthCheck()) {
+      if (!this.isActive || !this.healthCheck()) {
         clearInterval(interval)
         return;
       }
 
-      dis.commandSocket.send(buffer);
+      this.commandSocket.send(buffer);
     }, 1000 * 5);
   }
 
