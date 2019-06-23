@@ -2,7 +2,7 @@ This is an SDK to the Kmail bet API
 in this API you can connect, subscribe and query the active market, line and prices.
 this project is a base project for working with Kmail API and will save time connecting and running you first requests to Kmail API
 
-**General Note**
+**General Note:**
 This package track only soccer events, but can be changed to track every sport type.
 
 Contents
@@ -67,6 +67,7 @@ Kmail.KmailProtoLoader.init().then(() => {
 ```
 
 Here is the entities list you can register to and their meaning:
+
 | Entity Name | Proto Entity | Note
 |------------|-----------------------------------|------------------------
 | queryFinish | queryStatusModel | received this entity when a query is done
