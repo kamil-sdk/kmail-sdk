@@ -71,14 +71,14 @@ const extract = (frame2, frame3, frame4) => {
   }
 
   if (!envelop || ! payload) {
-    throw Error('Invalid Data!');
+    throw Error('Server Response Error: Extract - Invalid Data! Missing envelop or payload!');
   }
 
   const envelopObject = decodeEnvelop(envelop);
   const className = idToClassName[envelopObject.PayloadType];
 
   if (!className) {
-    throw Error('Unknown class id! can\'t decode');
+    throw Error(`Server Response Error: Extract - Unknown class id - ${envelopObject.PayloadType}! can\'t decode`);
   }
 
   let retObject = undefined; 
@@ -86,8 +86,7 @@ const extract = (frame2, frame3, frame4) => {
     try {
       retObject = KmailProtoLoader.decode(className, payload);
     } catch (err) {
-      console.log(`could not decode object of id ${envelopObject.PayloadType} - ${className}`)
-      //throw err;
+      throw Error(`Server Response Error: Extract - Error decoding object of id ${envelopObject.PayloadType} - ${className}`);
     }
   }
 

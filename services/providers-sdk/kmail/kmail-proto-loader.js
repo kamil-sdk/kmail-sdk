@@ -19,8 +19,12 @@ const globSearch = (template) => {
   })});
 };
 
-const init = async () => {
-  const files = await globSearch(path.resolve(__kmail_basedir, 'services/providers-sdk/kmail/proto/*.proto'));
+const init = async (location) => {
+  if (!location) {
+    location = path.resolve(__kmail_basedir, 'services/providers-sdk/kmail/proto');
+  }
+
+  const files = await globSearch(location + '/*.proto');
   const root = await protobuf.load(files);
   files.forEach((fp) => {
     const className = path.basename(fp, path.extname(fp));

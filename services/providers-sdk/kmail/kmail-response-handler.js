@@ -7,6 +7,10 @@ const moment = require('moment');
 const config = require(path.resolve(__kmail_basedir, 'services/providers-sdk/kmail/kmail-config.sdk'));
 const PackageTransformer = require(path.resolve(__kmail_basedir, 'services/providers-sdk/kmail/kmail-package-transformer'));
 
+const emitProtoChange = (emitter) => {
+  emitter.emit('err', {error: 'Kmail might changed their .proto folder. if persist contact Kmail ASAP!'});
+}
+
 const keepAliveHandler = (decodedData, kmailSDK, dataChannel) => {
   if (dataChannel) {
     kmailSDK.dataKeepAlive = moment();
@@ -52,14 +56,23 @@ router[config.teamModel] = modelHandler;
 router[config.eventModel] = modelHandler;
 router[config.eventUpdateModel] = modelHandler;
 router[config.lineModel] = modelHandler;
-router[config.priceModel] = modelHandler;
+//router[config.priceModel] = modelHandler;
 router[config.queryStatusModel] = queryFinishedHandler;
 
 const routeResponse = (frame2, frame3, frame4, kmailSDK, dataChannel) => {
-  const decodedData = PackageTransformer.extract(frame2, frame3, frame4);
+  let decodedData = null;
+
+  try{
+    decodedData = PackageTransformer.extract(frame2, frame3, frame4);
+  } catch (err) {
+    kmailSDK.emitter.emit('err', err);
+    emitProtoChange(kmailSDK.emitter);
+  }
 
   if(!decodedData) {
-    throw Error('Error extracting the server response');
+    kmailSDK.emitter.emit('err', { error: 'Server Response Error: Error extracting the server response. '
+      + 'Kmail might changed their .proto folder. if persist contact Kmail ASAP!' });
+      emitProtoChange(kmailSDK.emitter);
   }
 
   if (router[decodedData.className]) {
@@ -67,7 +80,9 @@ const routeResponse = (frame2, frame3, frame4, kmailSDK, dataChannel) => {
     return router[decodedData.className](decodedData.object, kmailSDK, dataChannel, emittedName);
   }
   else{
-    console.log(`received an object of class - "${decodedData.className}". the object is ${decodedData.object}`);
+    kmailSDK.emitter.emit('err', { error:`Server Response Error: Received an object of class - `
+      + `"${decodedData.className}". This is an unknown class` });
+      emitProtoChange(kmailSDK.emitter);
   }
 
   return false;

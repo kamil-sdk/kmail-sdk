@@ -131,6 +131,7 @@ class KmailSDK {
     if (!rtVal) {
       this.isActive = false;
       rtVal = false;
+      eventEmitter.emit('statusUpdate', {status: 'inactive', reconnecting: true});
       this.connect();
     }
 
@@ -139,6 +140,7 @@ class KmailSDK {
 
   disconnect() {
     this.isActive = false;
+    eventEmitter.emit('statusUpdate', {status: 'inactive', reconnecting: false});
   }
 }
 
