@@ -101,7 +101,7 @@ class KmailSDK {
 
     const interval = setInterval(() => {
       if (!this.isActive || !this.healthCheck()) {
-        clearInterval(interval)
+        clearInterval(interval);
         return;
       }
 
@@ -110,7 +110,7 @@ class KmailSDK {
   }
 
   healthCheck() {
-    const now = moment()
+    const now = moment();
     let rtVal = true;
     if (this.commandKeepAlive) {
       const diff = now.diff(this.commandKeepAlive, 'seconds');
@@ -127,7 +127,7 @@ class KmailSDK {
     if (!rtVal) {
       this.isActive = false;
       rtVal = false;
-      this.eventEmitter.emit('statusUpdate', {status: 'inactive', reconnecting: true});
+      this.emitter.emit('statusUpdate', {status: 'inactive', reconnecting: true});
       this.connect();
     }
 
@@ -136,7 +136,7 @@ class KmailSDK {
 
   disconnect() {
     this.isActive = false;
-    this.eventEmitter.emit('statusUpdate', {status: 'inactive', reconnecting: false});
+    this.emitter.emit('statusUpdate', {status: 'inactive', reconnecting: false});
   }
 }
 
