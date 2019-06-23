@@ -56,7 +56,7 @@ router[config.teamModel] = modelHandler;
 router[config.eventModel] = modelHandler;
 router[config.eventUpdateModel] = modelHandler;
 router[config.lineModel] = modelHandler;
-//router[config.priceModel] = modelHandler;
+router[config.priceModel] = modelHandler;
 router[config.queryStatusModel] = queryFinishedHandler;
 
 const routeResponse = (frame2, frame3, frame4, kmailSDK, dataChannel) => {

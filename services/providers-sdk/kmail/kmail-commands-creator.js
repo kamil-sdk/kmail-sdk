@@ -26,7 +26,7 @@ const createSubscribeCommand = (securityToken) => {
   return {
     data: {
       SecurityToken: securityToken,
-      EntityTypes : 7343134,
+      EntityTypes : 3198,
       Filters: [filter]
     },
     className: subscribeCommand
